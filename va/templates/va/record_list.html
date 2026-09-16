@@ -1,0 +1,37 @@
+{% extends "va/base.html" %}
+
+{% block content %}
+
+<h1>Records</h1>
+
+<br><br>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Deceased Name</th>
+            <th>Sex</th>
+            <th>Age at Death</th>
+            <th>Date of Death</th>
+            <th>Place of Death</th>
+            <th>Respondent Name</th>
+            <th>Respondent Relationship</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for record in records %}
+        <tr>
+            <td>{{ record.deceased_name }}</td>
+            <td>{{ record.get_sex_display }}</td>
+            <td>{{ record.age_at_death }}</td>
+            <td>{{ record.date_of_death }}</td>
+            <td>{{ record.get_place_of_death_display }}</td>
+            <td>{{ record.respondent_name }}</td>
+            <td>{{ record.respondent_relationship }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
