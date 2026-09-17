@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<h1>Records</h1>
+<h1>Records List</h1>
 
 <br><br>
 
@@ -16,6 +16,10 @@
             <th>Place of Death</th>
             <th>Respondent Name</th>
             <th>Respondent Relationship</th>
+            <th>Interview Date</th>
+            <th>Symptoms</th>
+            <th>Probable cause of Death</th>
+            <th>Date created</th>
         </tr>
     </thead>
 
@@ -29,6 +33,10 @@
             <td>{{ record.get_place_of_death_display }}</td>
             <td>{{ record.respondent_name }}</td>
             <td>{{ record.respondent_relationship }}</td>
+            <td>{{ record.interview_date }}</td>
+            <td>{{ record.symptoms }}</td>
+            <td>{{ record.probable_cause_of_death }}</td>
+            <td>{{ record.created_at }}</td>
         </tr>
         {% endfor %}
     </tbody>

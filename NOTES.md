@@ -7,3 +7,8 @@
 ***What is a migration, and why don't we edit the database by hand?***
 
 A Migration consists of the changes that need to be made in a database that were defined in the models. Migrations are an easy way of making changes to the database structure. The reason migrations are used over editing the database by hand, is because it reduces the risk of data loss and it allows for all the changes to be tracked clearly in the code which is visible to anyone with access to it.
+
+***What is the difference between a Django view and a template?***
+
+A View layer manages application logic, it handles requests and processes what responses should be returned to the user. The Template just structures the way the information is going to be displayed to the user, that could be coming from data passed by the view or hardcoded elements in the template.
+
