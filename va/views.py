@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import VerbalAutopsy
+from .forms import VerbalAutopsyForm
 
 # Create your views here.
 
@@ -14,9 +15,9 @@ def add_record(request):
     if request.method == "POST":
         form = VerbalAutopsyForm(request.POST)
         
-    if form.is_valid():
-        form.save()
-        return redirect("record_list")
+        if form.is_valid():
+            form.save()
+            return redirect("record_list")
     else:
         form = VerbalAutopsyForm()
         
