@@ -6,40 +6,42 @@
 
 <br><br>
 
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>Deceased Name</th>
-            <th>Sex</th>
-            <th>Age at Death</th>
-            <th>Date of Death</th>
-            <th>Place of Death</th>
-            <th>Respondent Name</th>
-            <th>Respondent Relationship</th>
-            <th>Interview Date</th>
-            <th>Symptoms</th>
-            <th>Probable cause of Death</th>
-            <th>Date created</th>
-        </tr>
-    </thead>
+<div class="container-fluid">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Deceased Name</th>
+                <th>Sex</th>
+                <th>Age at Death</th>
+                <th>Date of Death</th>
+                <th>Place of Death</th>
+                <th>Respondent Name</th>
+                <th>Respondent Relationship</th>
+                <th>Interview Date</th>
+                <th>Symptoms</th>
+                <th>Probable cause of Death</th>
+                <th>Date created</th>
+            </tr>
+        </thead>
 
-    <tbody>
-        {% for record in records %}
-        <tr>
-            <td>{{ record.deceased_name }}</td>
-            <td>{{ record.get_sex_display }}</td>
-            <td>{{ record.age_at_death }}</td>
-            <td>{{ record.date_of_death }}</td>
-            <td>{{ record.get_place_of_death_display }}</td>
-            <td>{{ record.respondent_name }}</td>
-            <td>{{ record.respondent_relationship }}</td>
-            <td>{{ record.interview_date }}</td>
-            <td>{{ record.symptoms }}</td>
-            <td>{{ record.probable_cause_of_death }}</td>
-            <td>{{ record.created_at }}</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+        <tbody>
+            {% for record in records %}
+            <tr>
+                <td>{{ record.deceased_name }}</td>
+                <td>{{ record.get_sex_display }}</td>
+                <td>{{ record.age_at_death }}</td>
+                <td>{{ record.date_of_death }}</td>
+                <td>{{ record.get_place_of_death_display }}</td>
+                <td>{{ record.respondent_name }}</td>
+                <td>{{ record.respondent_relationship }}</td>
+                <td>{{ record.interview_date }}</td>
+                <td>{{ record.symptoms }}</td>
+                <td>{{ record.probable_cause_of_death }}</td>
+                <td>{{ record.created_at }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 
 {% endblock %}
