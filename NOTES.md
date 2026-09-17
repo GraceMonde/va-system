@@ -12,3 +12,7 @@ A Migration consists of the changes that need to be made in a database that were
 
 A View layer manages application logic, it handles requests and processes what responses should be returned to the user. The Template just structures the way the information is going to be displayed to the user, that could be coming from data passed by the view or hardcoded elements in the template.
 
+***What does “deploying” mean, and why did we use Git to do it?***
+
+Deploying means getting code for a project that has been built and running it on a live server so it can be accessed from the internet by other users.
+Git allows us to have the exact same commit history the code had when it was being built. So the server does not miss out on any file, if changes are made later on and pushed to github, the only thing needed is a 'git pull' from the server for the live code to be updated.

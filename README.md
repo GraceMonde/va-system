@@ -37,7 +37,7 @@ A Verbal Autopsy System is a digital form that is used to gather information of 
 
 ## Live deployed URL
 
- `  `
+ ` https://gracemonde.pythonanywhere.com/ `
 
 ## What I learned
 
@@ -45,4 +45,4 @@ A Verbal Autopsy System is a digital form that is used to gather information of 
 - I learned how to use a Linux environment for building and running an app, using the terminal, virtual environments, and running a live dev server.
 - I learned that migrations keep a history of every database change and it allows anyone else to recreate the exact same database structure from scratch.
 
-## Grace Kabwe
+## Grace Monde Kabwe
